@@ -5,10 +5,10 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 
 const kpis = [
   { label: "Total Donors", value: "1,284", icon: Users, color: "#e11d48" },
-  { label: "Total Raised YTD", value: "Â£487,320", icon: PoundSterling, color: "#16a34a" },
-  { label: "Gift Aid Claimable", value: "Â£45,210", icon: Gift, color: "#1a56db" },
+  { label: "Total Raised YTD", value: "£487,320", icon: PoundSterling, color: "#16a34a" },
+  { label: "Gift Aid Claimable", value: "£45,210", icon: Gift, color: "#1a56db" },
   { label: "Active Campaigns", value: "6", icon: Megaphone, color: "#7c3aed" },
-  { label: "Grants Received", value: "Â£120,000", icon: Award, color: "#f59e0b" },
+  { label: "Grants Received", value: "£120,000", icon: Award, color: "#f59e0b" },
 ]
 
 const monthlyDonations = [
@@ -27,11 +27,11 @@ const monthlyDonations = [
 ]
 
 const topDonors = [
-  { name: "The Blackwood Foundation", total: "Â£48,500", lastDonation: "2026-05-15" },
-  { name: "Sir James Hartley", total: "Â£32,000", lastDonation: "2026-04-22" },
-  { name: "Meridian Trust", total: "Â£25,000", lastDonation: "2026-06-01" },
-  { name: "Catherine & Edward Moore", total: "Â£18,750", lastDonation: "2026-05-30" },
-  { name: "GreenPath Corporate CSR", total: "Â£15,200", lastDonation: "2026-06-05" },
+  { name: "The Blackwood Foundation", total: "£48,500", lastDonation: "2026-05-15" },
+  { name: "Sir James Hartley", total: "£32,000", lastDonation: "2026-04-22" },
+  { name: "Meridian Trust", total: "£25,000", lastDonation: "2026-06-01" },
+  { name: "Catherine & Edward Moore", total: "£18,750", lastDonation: "2026-05-30" },
+  { name: "GreenPath Corporate CSR", total: "£15,200", lastDonation: "2026-06-05" },
 ]
 
 const campaigns = [
@@ -68,7 +68,7 @@ export default function CharityDashboard() {
               <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
               <XAxis dataKey="month" tick={{ fontSize: 11 }} />
               <YAxis tick={{ fontSize: 11 }} tickFormatter={(v) => `${(v / 1000).toFixed(0)}k`} />
-              <Tooltip formatter={(v: any) => [`Â£${v.toLocaleString()}`, "Donations"]} />
+              <Tooltip formatter={(v: any) => [`£${v.toLocaleString()}`, "Donations"]} />
               <Area type="monotone" dataKey="amount" stroke="#e11d48" fill="#fce7f3" strokeWidth={2} />
             </AreaChart>
           </ResponsiveContainer>
@@ -78,9 +78,9 @@ export default function CharityDashboard() {
           <h2 style={{ fontSize: 15, fontWeight: 700, color: "var(--foreground)", marginBottom: 20 }}>Gift Aid Summary</h2>
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             {[
-              { label: "Eligible", value: "Â£180,840", pct: 100, color: "#1a56db" },
-              { label: "Claimed", value: "Â£135,630", pct: 75, color: "#16a34a" },
-              { label: "Unclaimed", value: "Â£45,210", pct: 25, color: "#f59e0b" },
+              { label: "Eligible", value: "£180,840", pct: 100, color: "#1a56db" },
+              { label: "Claimed", value: "£135,630", pct: 75, color: "#16a34a" },
+              { label: "Unclaimed", value: "£45,210", pct: 25, color: "#f59e0b" },
             ].map(g => (
               <div key={g.label}>
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
@@ -137,8 +137,8 @@ export default function CharityDashboard() {
                     <div style={{ width: `${Math.min(pct, 100)}%`, height: "100%", background: "#e11d48", borderRadius: 5 }} />
                   </div>
                   <div style={{ display: "flex", justifyContent: "space-between" }}>
-                    <span style={{ fontSize: 12, fontWeight: 700, color: "#e11d48" }}>{"Â£"}{c.raised.toLocaleString()}</span>
-                    <span style={{ fontSize: 12, color: "var(--muted-foreground)" }}>of {"Â£"}{c.target.toLocaleString()}</span>
+                    <span style={{ fontSize: 12, fontWeight: 700, color: "#e11d48" }}>{"£"}{c.raised.toLocaleString()}</span>
+                    <span style={{ fontSize: 12, color: "var(--muted-foreground)" }}>of {"£"}{c.target.toLocaleString()}</span>
                   </div>
                 </div>
               )

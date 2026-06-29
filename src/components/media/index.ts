@@ -7,3 +7,4 @@ export { ProviderLogo, EntityLogo } from "./provider-logo";
 export { ImageUploader, AvatarUploader } from "./image-uploader";
 export { FileThumbnailGrid } from "./file-thumbnail-grid";
 export type { FileItem } from "./file-thumbnail-grid";
+export { DocumentViewer } from "./document-viewer";

@@ -43,10 +43,10 @@ export default function CharityReportsPage() {
       {/* KPI Strip */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, marginBottom: 28 }}>
         {[
-          { label: "Total Raised YTD", value: "Â£487,320", color: "#e11d48" },
+          { label: "Total Raised YTD", value: "£487,320", color: "#e11d48" },
           { label: "vs. Last Year", value: "+18.4%", color: "#16a34a" },
-          { label: "Average Gift", value: "Â£65", color: "#1a56db" },
-          { label: "Gift Aid Claimed", value: "Â£135,630", color: "#7c3aed" },
+          { label: "Average Gift", value: "£65", color: "#1a56db" },
+          { label: "Gift Aid Claimed", value: "£135,630", color: "#7c3aed" },
         ].map(k => (
           <div key={k.label} style={{ border: "1px solid var(--border)", borderRadius: 10, padding: 18, background: "white" }}>
             <p style={{ fontSize: 12, color: "var(--muted-foreground)", margin: 0 }}>{k.label}</p>
@@ -64,7 +64,7 @@ export default function CharityReportsPage() {
               <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
               <XAxis dataKey="month" tick={{ fontSize: 11 }} />
               <YAxis tick={{ fontSize: 11 }} tickFormatter={(v) => `${(v / 1000).toFixed(0)}k`} />
-              <Tooltip formatter={(v: any) => [`Â£${v.toLocaleString()}`, "Raised"]} />
+              <Tooltip formatter={(v: any) => [`£${v.toLocaleString()}`, "Raised"]} />
               <Bar dataKey="amount" fill="#e11d48" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
@@ -79,7 +79,7 @@ export default function CharityReportsPage() {
                 {incomeBySource.map((_, i) => <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />)}
               </Pie>
               <Legend iconType="circle" formatter={(v) => <span style={{ fontSize: 11 }}>{v}</span>} />
-              <Tooltip formatter={(v: any) => [`Â£${v.toLocaleString()}`, ""]} />
+              <Tooltip formatter={(v: any) => [`£${v.toLocaleString()}`, ""]} />
             </PieChart>
           </ResponsiveContainer>
         </div>
