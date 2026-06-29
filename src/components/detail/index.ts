@@ -9,3 +9,4 @@ export {
   SummaryFacts,
 } from "./record-summary-panel";
 export type { SummaryRow } from "./record-summary-panel";
+export { MediaDocumentsTab } from "./media-documents-tab";
